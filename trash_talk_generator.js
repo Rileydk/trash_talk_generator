@@ -15,10 +15,18 @@ const data = {
 
 const phrase = ['很簡單', '很容易', '很快', '很正常']
 
+function randomDrawer(arr) {
+  return Math.floor(Math.random() * arr)
+}
+
 function generateTrashTalk(role) {
-  const taskIndex = Math.floor(Math.random() * data[role].task.length)
-  const phraseIndex = Math.floor(Math.random() * phrase.length)
-  return `${data[role].title}${data[role].task[taskIndex]}應該${phrase[phraseIndex]}吧！`
+  if (role) {
+    const taskIndex = randomDrawer(data[role].task.length)
+    const phraseIndex = randomDrawer(phrase.length)
+    return `${data[role].title}${data[role].task[taskIndex]}應該${phrase[phraseIndex]}吧！`
+  } else {
+    return `還沒選擇任何角色喔！`
+  }
 }
 
 module.exports = generateTrashTalk

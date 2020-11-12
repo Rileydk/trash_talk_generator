@@ -42,3 +42,22 @@ app.get('/generating', (req, res) => {
 app.listen(port, () => {
   console.log(`The server is listening on http://localhost:${port}.`)
 })
+
+// 疑問1: 為什麼在app.get('/generating, ...)中註冊helpers會失敗？會顯示Missing Helpers ifMatch
+// app.get('/generating', (req, res) => {
+//   const role = req.query.roles
+//   const trashTalk = trashTalkGenerator(role)
+//   res.render('index', {
+//     role,
+//     trashTalk,
+//     helpers: {
+//       ifMatch: function (role, select, options) {
+//         if (role === select) {
+//           return options.fn(this)
+//         }
+//       }
+//     }
+//   })
+// })
+
+// 疑問2: 這個情境下用GET或POST哪個比較合適？
