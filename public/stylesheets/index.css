@@ -2,6 +2,14 @@ img {
   height: 40vh;
 }
 
+img:hover {
+  cursor: pointer;
+}
+
+.role-title:hover {
+  cursor: pointer;
+}
+
 #generate-div {
   height: 100px;
 }

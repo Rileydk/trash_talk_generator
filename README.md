@@ -13,6 +13,8 @@
 1. 可以選擇工程師、設計師、創業家任一角色。
 2. 按下按鈕產生專屬幹話。
 
+![image](https://github.com/Rileydk/trash_talk_generator/blob/d3956d88a4e7971c5fef109dfe446393dd8c50ca/Hnet.com-image.gif)
+
 ## 安裝方式
 
 用終端機安裝這個專案。
